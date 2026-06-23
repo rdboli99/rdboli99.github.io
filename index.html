@@ -3,15 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Your Name - Resume & Blog</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        h1 { color: #0366d6; }
+        :root {
+            --primary: #0366d6;
+        }
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            line-height: 1.6; 
+            color: #333; 
+        }
+        header { 
+            background: linear-gradient(135deg, #0366d6, #0052a3); 
+            color: white; 
+            text-align: center; 
+            padding: 120px 20px 80px; 
+        }
+        nav { 
+            background: #f8f9fa; 
+            padding: 15px 0; 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+            border-bottom: 1px solid #eee;
+        }
+        nav a { 
+            margin: 0 20px; 
+            text-decoration: none; 
+            color: var(--primary); 
+            font-weight: 600; 
+        }
+        section { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
+        h1 { font-size: 2.8rem; margin: 0; }
+        h2 { color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .project-card, .blog-post {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .skills { display: flex; flex-wrap: wrap; gap: 15px; }
+        .skill-item {
+            background: #f1f1f1;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-weight: 500;
+        }
+        footer { 
+            background: #2c3e50; 
+            color: white; 
+            text-align: center; 
+            padding: 40px 20px; 
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple site hosted on GitHub Pages.</p>
-    <p>You can customize this HTML, add CSS, JavaScript, or additional pages.</p>
+    <header>
+        <h1>Your Full Name</h1>
+        <p style="font-size: 1.3rem; margin-top: 10px;">Your Professional Title • Current Role</p>
+    </header>
+
+    <nav>
+        <a href="#current">Current Role</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Languages & Skills</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="current">
+        <div class="container">
+            <h2>Where I Am Today</h2>
+            <p><strong>Current Position:</strong> [Your Job Title] at [Company Name]</p>
+            <p><strong>Location:</strong> [City, Country]</p>
+            <p>Write a short paragraph about your current responsibilities, achievements, and career focus here.</p>
+        </div>
+    </section>
+
+    <section id="projects" style="background: #f9f9f9;">
+        <div class="container">
+            <h2>Projects I'm Working On</h2>
+            
+            <div class="project-card">
+                <h3>Project Name 1</h3>
+                <p><strong>Technologies:</strong> [List technologies]</p>
+                <p>Short description of the project and your contribution.</p>
+                <a href="#" target="_blank">View Project →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Project Name 2</h3>
+                <p><strong>Technologies:</strong> [List technologies]</p>
+                <p>Short description of the project and your contribution.</p>
+                <a href="#" target="_blank">View Project →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Languages & Technologies</h2>
+            <div class="skills">
+                <div class="skill-item">Python — Advanced</div>
+                <div class="skill-item">JavaScript — Intermediate</div>
+                <div class="skill-item">SQL — Intermediate</div>
+                <div class="skill-item">React — Beginner</div>
+                <!-- Add more as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" style="background: #f9f9f9;">
+        <div class="container">
+            <h2>Personal Blog</h2>
+            
+            <div class="blog-post">
+                <h3>Blog Post Title 1</h3>
+                <p><em>Date: June 2026</em></p>
+                <p>Short summary or excerpt from your personal life post...</p>
+                <a href="#">Read full post →</a>
+            </div>
+
+            <div class="blog-post">
+                <h3>Blog Post Title 2</h3>
+                <p><em>Date: May 2026</em></p>
+                <p>Another short personal story or reflection...</p>
+                <a href="#">Read full post →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+            <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/yourprofile</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Your Name • Hosted on GitHub Pages</p>
+    </footer>
 </body>
 </html>
